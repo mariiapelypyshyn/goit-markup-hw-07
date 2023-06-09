@@ -52,6 +52,15 @@ img {
   display: block;
 }
 
+.section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.activity {
+  display: none;
+}
+
 .container {
   max-width: 428px;
   padding-left: 16px;
@@ -73,14 +82,6 @@ img {
   }
 }
 
-.section {
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-.activity {
-  display: none;
-}
-
 /* Header */
 
 .page-header-container {
@@ -89,12 +90,11 @@ img {
   align-items: center;
 }
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+
 .logo,
 .part-logo {
   font-family: var(--secondary-font-family);
@@ -108,7 +108,12 @@ img {
 .part-logo {
   color: var(--secondary-text-color);
 }
+
 @media screen and (max-width: 767px) {
+  .page-header-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
   .menu {
     display: none;
   }
@@ -141,9 +146,14 @@ img {
     pointer-events: auto;
   }
   .mobile-menu-container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     position: relative;
     padding-top: 80px;
-    padding-left: 24px;
+    padding-left: 40px;
+    padding-bottom: 40px;
   }
 
   .mobile-menu-close-icon {
@@ -166,10 +176,7 @@ img {
   .mobile-menu-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
     gap: 40px;
-    margin-left: 16px;
   }
   .mobile-menu-link,
   .mobile-menu-contacts-tel {
@@ -182,14 +189,14 @@ img {
   .active {
     color: var(--hover-focus-color);
   }
+  .contact-mobile {
+    font-style: normal;
+    margin-bottom: 48px;
+  }
   .mobile-menu-contacts-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
     gap: 40px;
-    margin-left: 16px;
-    margin-top: 284px;
   }
   .mobile-menu-contacts-tel {
     color: var(--accent-color);
@@ -204,8 +211,6 @@ img {
   .mobile-menu-soc-media-list {
     display: flex;
     gap: 56px;
-    margin-left: 16px;
-    margin-top: 48px;
   }
   .mobile-menu-soc-link {
     display: flex;
@@ -223,52 +228,37 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .page-header {
-    display: flex;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    height: 72px;
-  }
-  .page-header-container {
-    gap: 122px;
-  }
-
   .mobile-menu-open-btn {
     display: none;
+  }
+  .mobile-menu {
+    display: none;
+  }
+  .logo-header {
+    margin-right: 120px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .nav-header {
+    display: flex;
+    align-items: center;
   }
   .menu {
     display: flex;
     align-items: center;
     gap: 40px;
   }
-  .nav-header {
-    display: flex;
-    align-items: center;
-    gap: 120px;
-  }
-  .mobile-menu {
-    display: none;
-  }
-  .contact-information {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
   .menu-link {
     position: relative;
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     transition: color var(--transition-value);
-  }
-  .menu-link:hover,
-  .menu-link:focus {
-    color: var(--hover-focus-color);
-  }
-  .highlighting-the-active-page {
-    color: #404bbf;
   }
 
   .highlighting-the-active-page::after {
@@ -279,9 +269,23 @@ img {
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    left: 0px;
-    top: 42px;
+    margin-top: 20px;
+    bottom: -1px;
+    left: 0;
   }
+  .highlighting-the-active-page {
+    color: #404bbf;
+  }
+  .contacts {
+    font-style: normal;
+    margin-left: auto;
+  }
+  .contact-information {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .contact-information-link {
     font-size: 12px;
     line-height: 1.17;
@@ -290,8 +294,21 @@ img {
     color: var(--primary-text-color);
     transition: color var(--transition-value);
   }
+
+  .contact-information-link:hover,
+  .contact-information-link:focus {
+    color: var(--hover-focus-color);
+  }
 }
+
 @media screen and (min-width: 1158px) {
+  .page-header {
+    display: block;
+  }
+  .logo-header {
+    margin-right: 76px;
+  }
+
   .contact-information {
     flex-direction: row;
     gap: 40px;
@@ -676,6 +693,7 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 72px;
+    justify-content: center;
   }
   .feautures-item {
     flex-basis: calc((100% - 24px) / 2);
