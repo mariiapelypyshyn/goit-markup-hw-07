@@ -40,6 +40,11 @@
             </li>
           </ul>
         </nav>
+        <button class="mobile-menu-open-btn js-open-menu">
+          <svg class="mobile-menu-open-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
         <address class="contacts">
           <ul class="contact-information list">
             <li class="contact-information-item">
@@ -56,6 +61,90 @@
             </li>
           </ul>
         </address>
+      </div>
+      <div class="mobile-menu js-menu-container">
+        <div class="container mobile-menu-container">
+          <button type="button" class="mobile-menu-btn-close js-close-menu">
+            <svg class="mobile-menu-close-icon" width="8" height="8">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list list">
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-link link active" href="">Studio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-link link" href="">Portfolio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-link link" href="">Contacts</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu-contacts-list list">
+            <li class="mobile-menu-contacts-item">
+              <a class="mobile-menu-contacts-tel link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+            <li class="mobile-menu-contacts-item">
+              <a
+                class="mobile-menu-contacts-email link"
+                href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu-soc-media-list list">
+            <li class="mobile-menu-soc-media-item">
+              <a href="" class="mobile-menu-soc-link link">
+                <svg
+                  class="mobile-menu-social-icon"
+                  aria-label="icon instagram"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-media-item">
+              <a href="" class="mobile-menu-soc-link link">
+                <svg
+                  class="mobile-menu-social-icon"
+                  aria-label="icon twitter"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-media-item">
+              <a href="" class="mobile-menu-soc-link link">
+                <svg
+                  class="mobile-menu-social-icon"
+                  aria-label="icon facebook"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-menu-soc-media-item">
+              <a href="" class="mobile-menu-soc-link link">
+                <svg
+                  class="mobile-menu-social-icon"
+                  aria-label="icon linkedin"
+                  width="24"
+                  height="24"
+                >
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
@@ -91,12 +180,12 @@
             <li class="feautures-item">
               <div class="feautures-icon-container">
                 <svg
-                  class="feautures-icon feautures-icon-astronaut"
-                  aria-label="icon-astronaut"
+                  class="feautures-icon feautures-icon-diagram"
+                  aria-label="icon-diagram"
                   width="64"
                   height="64"
                 >
-                  <use href="./images/icons.svg#icon-astronaut"></use>
+                  <use href="./images/icons.svg#icon-diagram"></use>
                 </svg>
               </div>
               <h3 class="feautures-tittle">Punctuality</h3>
@@ -125,16 +214,16 @@
             <li class="feautures-item">
               <div class="feautures-icon-container">
                 <svg
-                  class="feautures-icon feautures-icon-diagram"
-                  aria-label="icon-diagram"
+                  class="feautures-icon feautures-icon-astronaut"
+                  aria-label="icon-astronaut"
                   width="64"
                   height="64"
                 >
-                  <use href="./images/icons.svg#icon-diagram"></use>
+                  <use href="./images/icons.svg#icon-astronaut"></use>
                 </svg>
               </div>
               <h3 class="feautures-tittle">Technologies</h3>
-              <p class="feautures-text">
+              <p class="feautures-text feautures-last-text">
                 Design practice focused on digital experiences. We bring forth a
                 deep passion for problem-solving.
               </p>
@@ -142,7 +231,7 @@
           </ul>
         </div>
       </section>
-      <section class="activity">
+      <section class="activity section">
         <div class="container">
           <h2 class="activity-tittle">What are we doing</h2>
           <ul class="activity-list list">
@@ -180,6 +269,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/img.jpg 1x, ./images/2x/img@2x.jpg 2x"
                 src="./images/img.jpg"
                 alt="Mark Guerrero"
                 width="264"
@@ -242,6 +332,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/img1.jpg 1x, ./images/2x/img1@2x.jpg 2x"
                 src="./images/img1.jpg"
                 alt="Tom Ford"
                 width="264"
@@ -304,6 +395,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/img2.jpg 1x, ./images/2x/img2@2x.jpg 2x"
                 src="./images/img2.jpg"
                 alt="Camila Garcia"
                 width="264"
@@ -366,6 +458,7 @@
             <li class="team-item">
               <img
                 class="team-img"
+                srcset="./images/img3.jpg 1x, ./images/2x/img3@2x.jpg 2x"
                 src="./images/img3.jpg"
                 alt="Daniel Wilson"
                 width="264"
@@ -686,6 +779,7 @@
         </form>
       </div>
     </div>
+    <script src="./JS/mobile-menu.js"></script>
     <script src="./JS/modal.js"></script>
   </body>
 </html>
